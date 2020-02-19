@@ -1,0 +1,5 @@
+﻿sudo apt install python3
+sudo apt-get install git-core
+git clone "https://gitlab.trace-software.com/BIMandCO/bimlearning.git"
+cd bimlearning/doc_init
+python ./initializer.py
