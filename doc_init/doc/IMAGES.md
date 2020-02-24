@@ -1,11 +1,11 @@
 ______________________________________________________________________________________________________
-####/IMAGES 
+#### /IMAGES 
 ______________________________________________________________________________________________________
 
 _Ajouter une image et sa classification dans la base de données_	
 ______________________________________________________________________________________________________
 
-####[GET] - /images  
+#### [GET] - /images  
 DESCRITPION : Retourne toutes les images \
 INPUTS : None   \
 OUTPUTS :   
@@ -48,7 +48,7 @@ OUTPUTS :
 <br>
 
 ___
-####[GET] - /images/\<id>  
+#### [GET] - /images/\<id\>  
 DESCRITPION : Retourne une image grâce à son id \
 INPUTS : None   \
 OUTPUTS :   
@@ -65,7 +65,7 @@ OUTPUTS :
 <br>
 
 ___
-####[POST] - /images
+#### [POST] - /images
 DESCRITPION : Ajoute des images dans la base de données \
 INPUTS : 
 
@@ -93,7 +93,7 @@ OUTPUTS : Retourne toutes les images ajoutées (cf [GET] /images)
 <br>
 
 ___
-####[PUT] - /images
+#### [PUT] - /images
 DESCRITPION : Modifie le label de toutes les images d'un objet \
 INPUTS : 
     
@@ -109,7 +109,7 @@ OUTPUTS : Retourne toutes les images modifiées (cf [GET] /images)
 <br>
 
 ___
-####[PUT] - /images/\<id>
+#### [PUT] - /images/\<id\>
 DESCRITPION : Modifie les paramètres d'une image (aucun paramètre particulier n'est requis)\
 INPUTS : 
     
@@ -126,7 +126,7 @@ OUTPUTS : Retourne l'image modifiée (cf [GET] /images/\<id>)
 <br>
 
 ___
-####[DELETE] - /images/\<id>
+#### [DELETE] - /images/\<id\>
 DESCRITPION : Supprime une image grâce à son id \
 INPUTS : None \
 OUTPUTS : "Image [id] deleted with success"

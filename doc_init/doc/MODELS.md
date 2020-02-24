@@ -4,10 +4,10 @@ ________________________________________________________________________________
 _______________________________________________________________________________________
 
 Description : \
-Cette API permet de classifier un ensemble d’images donné grâce à un « model » de neural network
+*Cette API permet de classifier un ensemble d’images donné grâce à un « model » de neural network*
 
 ___
-####[GET] - /models
+#### [GET] - /models
 DESCRITPION : Retourne tous les models. \
 INPUTS : None \
 OUTPUTS :  
@@ -67,7 +67,7 @@ OUTPUTS :
     ]
 
 
-####[GET] - /models/\<id>  
+#### [GET] - /models/\<id>  
 DESCRITPION : Retourne un model grâce à son id. \
 INPUTS : None \
 OUTPUTS :    
@@ -126,21 +126,22 @@ Les images peuvent être de nouvelles images, ou l'id d'une image en base de don
 INPUTS : 
 
     {
-	"images":                               - (Array) Liste d'images (nouvelles, ou id)
-		{
-		    "image_b64": "iVBORw[...]AACAAAAA",     - (String) Image en format base 64
-		    "label": "Baignoire",                   - (String) Classe de l'image
-		    "node_id": 1,                           - (Integer) id du node de la classe
-		    "name": "bfdsfjk.png"                   - (String) nom de l'image
-		    "object_id": 5                          - (Integer) id de l'objet duquel l'image a été extraite
-		},
-		{
-		    "id": 3                                 - (Integer) Id de l'image dans la database
-		}
-		{
-		    "id": 15                                - (Integer) Id de l'image dans la database
-		}
-	]
-}
+        "images":                               - (Array) Liste d'images (nouvelles, ou id)
+            [    
+                {
+                    "image_b64": "iVBORw[...]AACAAAAA",     - (String) Image en format base 64
+                    "label": "Baignoire",                   - (String) Classe de l'image
+                    "node_id": 1,                           - (Integer) id du node de la classe
+                    "name": "bfdsfjk.png"                   - (String) nom de l'image
+                    "object_id": 5                          - (Integer) id de l'objet duquel l'image a été extraite
+                },
+                {
+                    "id": 3                                 - (Integer) Id de l'image dans la database
+                }
+                {
+                    "id": 15                                - (Integer) Id de l'image dans la database
+                }
+            ]
+    }
     
 OUTPUTS : Retourne le modèle , mis à jour et entrainé par les images fournies (cf [GET] /models/\<id>)

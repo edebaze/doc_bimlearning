@@ -7,7 +7,7 @@ Description : \
    _Créer des datasets d'images pour l'entrainement de modèles de prédiction_
 
 ___
-####[GET] - /datasets
+#### [GET] - /datasets
 DESCRITPION : Retourne tous les datasets \
 INPUTS : None \
 OUTPUTS :  
@@ -47,7 +47,7 @@ OUTPUTS :
 <br>
     
 ___    
-####[GET] - /datasets/\<id>
+#### [GET] - /datasets/\<id>
 DESCRITPION : Retourne un dataset grâce à son id \
 INPUTS : None \
 OUTPUTS :  
@@ -69,8 +69,8 @@ OUTPUTS :
 <br>
     
 ___
-####[POST] - /datasets
-DESCRITPION : Créer un dataset \
+#### [POST] - /datasets
+DESCRITPION : Créé un dataset \
 INPUTS :
 
     {
@@ -102,7 +102,7 @@ OUTPUTS : Dataset créé (cf [GET] /datasets)
 <br>
 
 ___
-####[DELETE] - /datasets/\<id>
+#### [DELETE] - /datasets/\<id\> 
 DESCRITPION : Supprime un dataset \
 INPUTS : None \
 OUTPUTS: "Dataset [id] deleted with success"

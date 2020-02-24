@@ -1,11 +1,11 @@
 ______________________________________________________________________________________________________
-####/PREDICTIONS 
+#### /PREDICTIONS 
 ______________________________________________________________________________________________________
 
 _Effectuer une prédiction sur un ensemble de données afin d'en classer le contenu_	
 ______________________________________________________________________________________________________
 
-####[GET] - /predictions  
+#### [GET] - /predictions  
 DESCRITPION : Retourne toutes les predictions \
 INPUTS : None   \
 OUTPUTS :   
@@ -63,7 +63,7 @@ OUTPUTS :
 <br>
 
 ___
-####[GET] - /predictions/<id>   
+#### [GET] - /predictions/<id>   
 DESCRITPION : Retourne une prédiction depuis son id \
 INPUTS : None   \
 OUTPUTS :   
@@ -120,8 +120,10 @@ OUTPUTS :
 <br>
 
 ___
-[POST] - /predictions ---------------------------------------------------------------------------------------
-DESCRITPION : Lit un ensemble d'images (format: base64) et retourne une Prediction (object)
+#### [POST] - /predictions ---------------------------------------------------------------------------------------
+
+DESCRITPION : Lit un ensemble d'images (format: base64) et retourne une Prediction (object) \
+INPUTS :
     
     {
         "model_id": 3,                                                          - [NOT REQUIRED] ID of the model to use (do not add this key to the inputs data if you want to use the "default model", or set value to None)
@@ -137,7 +139,7 @@ DESCRITPION : Lit un ensemble d'images (format: base64) et retourne une Predicti
         ]
     }
 
-OUTPUTS : \ 
+OUTPUTS : 
 
     [
           {
@@ -189,11 +191,12 @@ OUTPUTS : \
 <br>
 
 ___
-[POST] - /predictions/test ---------------------------------------------------------------------------------------
-DESCRITPION : Test le modèle avec un dataset de test déjà prêt
+#### [POST] - /predictions/test ---------------------------------------------------------------------------------------
+DESCRITPION : Test le modèle avec un dataset de test déjà prêt \
 INPUTS : 
-{
-    	"model_id": 1 				-	 (Integer) Id du model à utiliser
-}
+
+    {
+        "model_id": 1 		- (Integer) Id du model à utiliser
+    }
 
 OUTPUTS :  Retourne la prédiction (cf [GET] /predictions/<id>)
