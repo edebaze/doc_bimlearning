@@ -18,6 +18,7 @@ OUTPUTS :
                 "name": "bath_tub.png",             - (String) Nom de l'image (peut être n'importe quoi)
                 "node_id": 12,                      - (Integer) Id du label dans la table de classification
                 "object_id": 4                      - (Integer) Id de l'objet dont l'image a été extraite
+                "id_bimandco": 732                  - (Integer) Id de l'image dans la base de données BIM&Co
           },
           {
                 "id": 15,                           
@@ -25,7 +26,8 @@ OUTPUTS :
                 "label": "Table",
                 "name": "11",
                 "node_id": 784,
-                "object_id": 17
+                "object_id": 17,
+                "id_bimandco": 5
           },
           {
                 "id": 16,
@@ -33,7 +35,8 @@ OUTPUTS :
                 "label": "Table",
                 "name": "qsdfqsgsd",
                 "node_id": 784,
-                "object_id": 17
+                "object_id": 17,
+                "id_bimandco": 2121
           },
           {
                 "id": 17,
@@ -41,7 +44,8 @@ OUTPUTS :
                 "label": "Chaise",
                 "name": "chaise.jpg",
                 "node_id": 45,
-                "object_id": 98
+                "object_id": 98,
+                "id_bimandco": 715
           }
     ]
     
@@ -60,6 +64,7 @@ OUTPUTS :
         "name": "bath_tub.png",             - (String) Nom de l'image (peut être n'importe quoi)
         "node_id": 12,                      - (Integer) Id du label dans la table de classification
         "object_id": 4                      - (Integer) Id de l'objet dont l'image a été extraite
+        "id_bimandco": 732                  - (Integer) Id de l'image dans la base de données BIM&Co
     }    
       
 <br>
@@ -76,6 +81,7 @@ INPUTS :
             "name": "bath_tub.png",             - (String) Nom de l'image (peut être n'importe quoi)
             "node_id": 12,                      - (Integer) Id du label dans la table de classification
             "object_id": 4                      - (Integer) Id de l'objet dont l'image a été extraite
+            "id_bimandco": 789                  - (Integer) Id de l'image dans la bdd BIM&Co
         },
         {
             "image_b64": "ezae[...]zaezae",
@@ -83,6 +89,7 @@ INPUTS :
             "name": "ezaeedqsdza",
             "node_id": 45,
             "object_id": 98
+            "id_bimandco": 23                   
         }
     ]
     
@@ -94,12 +101,14 @@ OUTPUTS : Retourne toutes les images ajoutées (cf [GET] /images)
 
 ___
 #### [PUT] - /images
-DESCRITPION : Modifie le label de toutes les images d'un objet \
+DESCRITPION : Modifie le label de toutes les images d'un objet associées à un "node_id" \
 INPUTS : 
     
     {
-        "object_id": 1,
-        "label": "Baignoires"
+        "object_id": 1,                     - (Integer) id de l'objet de l'image
+        "node_id": 17,                      - (Integer) id du label associé à cet objet
+        "new_node_id": 55,                  - (Integer) nouvel id de label associé à l'objet
+        "new_label": "Baignoires"           - (String) nouveau label associé à l'objet
     }
       
 OUTPUTS : Retourne toutes les images modifiées (cf [GET] /images)
@@ -118,6 +127,7 @@ INPUTS :
         "label": "Baignoires"           - [NON REQUIS] nouveau label
         "node_id": 15                   - [NON REQUIS] nouvel id du label dans la base de données
         "object_id": 37                 - [NON REQUIS] nouvel id de l'objet dans la base de données
+        "id_bimandco": 254              - [NON REQUIS] nouvel id de l'image dans la bdd BIM&Co
     }
       
 OUTPUTS : Retourne l'image modifiée (cf [GET] /images/\<id>)
@@ -130,3 +140,16 @@ ___
 DESCRITPION : Supprime une image grâce à son id \
 INPUTS : None \
 OUTPUTS : "Image [id] deleted with success"
+
+<br>
+
+___
+#### [DELETE] - /images
+DESCRITPION : Supprime toutes les images associées aux id "nodes_id" \
+INPUTS : 
+
+    {
+        "nodes_id": [15, 92, 11]       - (Array) Id des noeuds à supprimer
+    }
+    
+OUTPUTS : "Images of nodes_id [id] deleted with success"
